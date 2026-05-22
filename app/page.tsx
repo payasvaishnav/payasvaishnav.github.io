@@ -39,23 +39,22 @@ export default function Home() {
         <div className="intro-copy">
           <p className="tagline">Always learning, leading, and solving problems :)</p>
           <p>
-            Hey, I am Payas Vaishnav and I work on large-scale software, distributed systems and data pipelines, with a focus on
-            performance, reliability, security and system design. I am currently
-            pursuing Computer Science at Pandit Deendayal Energy
-            University.
+            Hey, I am Payas Vaishnav, and I work on large-scale software systems, distributed infrastructure, and data pipelines, with a focus on 
+            performance, reliability, security, and system design. I am also interested in competitive programming and GenAI infrastructure. I am 
+            currently pursuing Computer Engineering at Pandit Deendayal Energy University.
           </p>
           <p>
-            I will be joining <a href="https://www.visa.co.in/" target="_blank" rel="noopener noreferrer">Visa</a> as a System Architect Intern.
+            I am currently working at <a href="https://www.visa.co.in/" target="_blank" rel="noopener noreferrer">Visa</a> as a Systems Architect 
+            Intern in the Operations and Infrastructure team.
           </p>
           <p>
-            Previously, I worked at <a href="https://www.jio.com" target="_blank" rel="noopener noreferrer">Jio Platforms</a> as a SDE Intern, on a network instrumentation
-            system for processing and analyzing large-scale network traffic. My
+            Previously, I worked at <a href="https://www.jio.com" target="_blank" rel="noopener noreferrer">Jio Platforms</a> as 
+            a SDE Intern, on a network instrumentation system for processing and analyzing large-scale network traffic. My
             work involved building C++ microservices for packet parsing and
             developing data pipelines using Kafka and Docker.
           </p>
           <p>
-            I also build independent systems and explore problems in
-            data processing, system design, and quantitative analysis.
+            I also build independent systems and work on problems related to data processing, system design, and quantitative analysis.
           </p>
           <p>
             I am an active competitive programmer (<a href="https://codeforces.com/profile/psysecboi" target="_blank" rel="noopener noreferrer">Codeforces Specialist</a>, Meta hackercup Round-2 Qualifier) and have led
