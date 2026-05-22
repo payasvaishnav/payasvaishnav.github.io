@@ -72,6 +72,7 @@ export default function Home() {
           </p>
         </div>
 
+
         <div className="profile-wrap">
           <Image
             className="profile-image"
