@@ -61,11 +61,11 @@ export default function Home() {
             initiatives to teach and scale problem-solving across a large group
             of students (100+), as a vice-chair of the ACM student chapter at my university.
           </p>
-          <p>
+          {/* <p>
             I am interested in designing systems that are simple, efficient,
             and reliable, and in understanding how they behave under real-world
             constraints.
-          </p>
+          </p> */}
           <p>
             Alongside this, I have an active interest in geopolitics, enjoy playing the tabla 
             and ukulele, and follow and play a variety of sports.
