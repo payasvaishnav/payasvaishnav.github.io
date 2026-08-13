@@ -582,6 +582,65 @@ hr {
   font-weight: 700;
 }
 
+html[data-theme="dark"] .profile-hire-button {
+  border-color: color-mix(in srgb, var(--link) 62%, var(--line) 38%);
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--link) 78%, #0a0f16 22%),
+    color-mix(in srgb, var(--link) 60%, #090d14 40%)
+  );
+  color: #f5f9ff;
+}
+
+html[data-theme="dark"] .profile-hire-button:hover,
+html[data-theme="dark"] .profile-hire-button:focus-visible {
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--link) 88%, #070b11 12%),
+    color-mix(in srgb, var(--link) 70%, #060a10 30%)
+  );
+  border-color: color-mix(in srgb, var(--link) 78%, var(--foreground) 22%);
+}
+
+html[data-theme="dark"] .hire-modal-backdrop {
+  background: color-mix(in srgb, #000 66%, transparent);
+}
+
+html[data-theme="dark"] .hire-modal {
+  background: color-mix(in srgb, var(--background) 90%, #1a2330 10%);
+  border-color: color-mix(in srgb, var(--line) 55%, var(--foreground) 45%);
+}
+
+html[data-theme="dark"] .hire-form-wrap {
+  background: color-mix(in srgb, var(--background) 82%, #1d2735 18%);
+  border-color: color-mix(in srgb, var(--line) 58%, var(--foreground) 42%);
+}
+
+html[data-theme="dark"] .hire-form input,
+html[data-theme="dark"] .hire-form textarea {
+  background: color-mix(in srgb, var(--background) 72%, #243041 28%);
+  border-color: color-mix(in srgb, var(--line) 62%, var(--foreground) 38%);
+  color: #f1f6ff;
+}
+
+html[data-theme="dark"] .hire-form-note {
+  color: #7fd5a8;
+}
+
+html[data-theme="dark"] .hire-form-note-error {
+  color: #ffb6af;
+}
+
+html[data-theme="dark"] .hire-form-fallback {
+  background: color-mix(in srgb, #6f1f17 24%, var(--background) 76%);
+  border-color: color-mix(in srgb, #ef6f67 62%, var(--line) 38%);
+  color: #ffe7e3;
+}
+
+html[data-theme="dark"] .hire-form-fallback a {
+  color: #b8d1ff;
+}
+
 .recent-posts {
   margin-top: 34px;
 }
