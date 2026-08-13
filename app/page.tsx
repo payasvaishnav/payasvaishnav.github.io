@@ -44,14 +44,13 @@ export default function Home() {
             currently pursuing Computer Engineering at Pandit Deendayal Energy University.
           </p>
           <p>
-            I am currently working at <a href="https://www.visa.co.in/" target="_blank" rel="noopener noreferrer">Visa</a> as a Systems Architect 
-            Intern in the Operations and Infrastructure team.
+            I previously worked at <a href="https://www.visa.co.in/" target="_blank" rel="noopener noreferrer">Visa</a> as a Systems Architect 
+            Intern on the Developer Experience (DX) - Solution Engineering team within the Operations and Infrastructure unit.
           </p>
           <p>
-            Previously, I worked at <a href="https://www.jio.com" target="_blank" rel="noopener noreferrer">Jio Platforms</a> as 
-            a SDE Intern, on a network instrumentation system for processing and analyzing large-scale network traffic. My
-            work involved building C++ microservices for packet parsing and
-            developing data pipelines using Kafka and Docker.
+            Before that, I worked at <a href="https://www.jio.com" target="_blank" rel="noopener noreferrer">Jio Platforms</a> as 
+            an SDE Intern, where I built a network instrumentation system to process and analyze large-scale network traffic.
+            My work involved developing C++ microservices for packet parsing and building data pipelines using Kafka and Docker.
           </p>
           <p>
             I also build independent systems and work on problems related to data processing, system design, and quantitative analysis.
