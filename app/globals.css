@@ -407,6 +407,181 @@ hr {
   border-color: color-mix(in srgb, var(--line) 30%, var(--foreground) 70%);
 }
 
+.profile-hire-button {
+  margin: 14px 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 9px;
+  border: 1px solid color-mix(in srgb, var(--link) 42%, var(--line) 58%);
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--link) 92%, var(--foreground) 8%),
+    color-mix(in srgb, var(--link) 76%, var(--foreground) 24%)
+  );
+  transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease, transform 140ms ease;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.profile-hire-button:hover,
+.profile-hire-button:focus-visible {
+  color: #fff;
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--link) 84%, var(--foreground) 16%),
+    color-mix(in srgb, var(--link) 68%, var(--foreground) 32%)
+  );
+  border-color: color-mix(in srgb, var(--link) 60%, var(--foreground) 40%);
+  transform: translateY(-1px);
+}
+
+.profile-hire-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.hire-form-wrap {
+  width: 100%;
+  margin-top: 16px;
+  border: 1px solid color-mix(in srgb, var(--line) 40%, var(--foreground) 60%);
+  border-radius: 12px;
+  padding: 12px;
+  background: color-mix(in srgb, var(--background) 95%, var(--foreground) 5%);
+}
+
+.hire-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: color-mix(in srgb, var(--foreground) 40%, transparent);
+}
+
+.hire-modal {
+  width: min(560px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  border: 1px solid color-mix(in srgb, var(--line) 36%, var(--foreground) 64%);
+  border-radius: 14px;
+  padding: 14px;
+  background: var(--background);
+  position: relative;
+}
+
+.hire-modal .hire-form-wrap {
+  margin-top: 0;
+}
+
+.hire-modal-close {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--background) 92%, var(--foreground) 8%);
+  color: var(--foreground);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.hire-modal-close:hover,
+.hire-modal-close:focus-visible {
+  border-color: color-mix(in srgb, var(--line) 20%, var(--foreground) 80%);
+}
+
+.hire-form-submit {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.hire-form-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.73rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hire-form-wrap h3 {
+  margin: 2px 0 10px;
+  font-size: 1.15rem;
+}
+
+.hire-form {
+  display: grid;
+  gap: 8px;
+}
+
+.hire-form-field {
+  display: grid;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.hire-form input,
+.hire-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 7px 8px;
+  background: var(--background);
+  color: var(--foreground);
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+.hire-form textarea {
+  resize: vertical;
+  min-height: 76px;
+}
+
+.hire-form-note {
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+  color: color-mix(in srgb, #0f7a45 70%, var(--foreground) 30%);
+}
+
+.hire-form-note a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.13em;
+  font-weight: 600;
+}
+
+.hire-form-note-error {
+  color: var(--accent);
+}
+
+.hire-form-fallback {
+  margin-top: 12px;
+  padding: 10px 11px;
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, var(--line) 45%);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent) 12%, var(--background) 88%);
+  color: var(--foreground);
+}
+
+.hire-form-fallback a {
+  color: var(--link);
+  font-weight: 700;
+}
+
 .recent-posts {
   margin-top: 34px;
 }
@@ -598,6 +773,24 @@ hr {
   .recent-header {
     flex-wrap: wrap;
     gap: 8px;
+  }
+
+  .profile-hire-button {
+    width: 100%;
+    font-size: 0.92rem;
+  }
+
+  .hire-form-wrap {
+    margin-top: 14px;
+  }
+
+  .hire-modal-backdrop {
+    padding: 12px;
+  }
+
+  .hire-modal {
+    max-height: calc(100vh - 24px);
+    padding: 12px;
   }
 
   .not-found-shell {

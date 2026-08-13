@@ -5,6 +5,7 @@ import type { IconType } from "react-icons";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { getAllPosts } from "@/lib/blog";
 import SiteHeader from "@/components/site-header";
+import HireForm from "@/components/hire-form";
 
 export default function Home() {
   const posts = getAllPosts();
@@ -90,6 +91,8 @@ export default function Home() {
               </li>
             ))}
           </ul>
+
+          <HireForm />
         </div>
       </section>
 
