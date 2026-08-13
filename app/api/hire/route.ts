@@ -1,5 +1,7 @@
 import nodemailer from "nodemailer";
 
+export const dynamic = "force-static";
+
 type HirePayload = {
   name?: string;
   email?: string;

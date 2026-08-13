@@ -6,6 +6,7 @@ type SubmitState = "idle" | "sending" | "success" | "error";
 
 export default function HireForm() {
   const apiBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const isStaticExport = process.env.NEXT_PUBLIC_STATIC_EXPORT === "true";
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState<SubmitState>("idle");
   const [serviceDown, setServiceDown] = useState(false);
@@ -126,7 +127,18 @@ export default function HireForm() {
               <p className="hire-form-kicker">Hiring for a role?</p>
               <h3 id="hire-form-title">Hire Me</h3>
 
-              <form className="hire-form" onSubmit={onSubmit}>
+              {isStaticExport ? (
+                <p className="hire-form-note hire-form-fallback" aria-live="polite">
+                  This site is running in static mode. Please message me on{" "}
+                  <a href="https://linkedin.com/in/payasv" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                  </a>{" "}
+                  or email directly at <a href="mailto:replypkv@gmail.com">replypkv@gmail.com</a>.
+                </p>
+              ) : null}
+
+              {!isStaticExport ? (
+                <form className="hire-form" onSubmit={onSubmit}>
                 <label className="hire-form-field">
                   Name
                   <input name="name" type="text" required autoComplete="name" />
@@ -150,7 +162,8 @@ export default function HireForm() {
                 <button className="profile-hire-button hire-form-submit" type="submit" disabled={status === "sending"}>
                   {status === "sending" ? "Sending..." : "Send"}
                 </button>
-              </form>
+                </form>
+              ) : null}
 
               {serviceDown ? (
                 <p className="hire-form-note hire-form-note-error hire-form-fallback" aria-live="polite">
