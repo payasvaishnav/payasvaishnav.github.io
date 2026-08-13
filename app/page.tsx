@@ -7,6 +7,7 @@ import { getAllPosts } from "@/lib/blog";
 import SiteHeader from "@/components/site-header";
 import HireForm from "@/components/hire-form";
 
+
 export default function Home() {
   const posts = getAllPosts();
 
