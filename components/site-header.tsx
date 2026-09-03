@@ -11,8 +11,8 @@ export default function SiteHeader() {
       </h1>
       <div className="topbar-right">
         <nav>
-          <Link href="/collection" className="top-link">
-            Collection
+          <Link href="/library" className="top-link">
+            Library
           </Link>
         </nav>
         <ThemeToggle />

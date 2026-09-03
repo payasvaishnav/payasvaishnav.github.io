@@ -14,7 +14,7 @@ const SHARE_BASE_URL = "https://payasvaishnav.github.io";
 export default function PostShare({ slug, title }: PostShareProps) {
   const [copied, setCopied] = useState(false);
 
-  const postUrl = `${SHARE_BASE_URL}/collection/${slug}`;
+  const postUrl = `${SHARE_BASE_URL}/library/${slug}`;
   const encodedPostUrl = encodeURIComponent(postUrl);
   const encodedTitle = encodeURIComponent(title);
 

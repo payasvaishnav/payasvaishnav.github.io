@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import ContactTicker from "@/components/contact-ticker";
 import SiteFooter from "@/components/site-footer";
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <ContactTicker />
         <SiteFooter />
       </body>
     </html>

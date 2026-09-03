@@ -23,8 +23,8 @@ export default function BlogsPage() {
   return (
     <main className="page">
       <SiteHeader />
-      <h2 className="collection-title">Collection</h2>
-      <p className="muted">A collection of thoughts and interesting reads.</p>
+      <h2 className="collection-title">Library</h2>
+      <p className="muted">A library of thoughts and interesting reads.</p>
       <hr className="collection-sep" aria-hidden="true" />
 
       {posts.length === 0 ? (
@@ -36,7 +36,7 @@ export default function BlogsPage() {
               <div className="post-item">
                 <div className="post-header-line">
                   <span className="post-date">{formatDate(post.date)} :</span>
-                  <Link className="post-title" href={`/collection/${post.slug}`}>
+                  <Link className="post-title" href={`/library/${post.slug}`}>
                     {post.title}
                   </Link>
                   {/* Removed post.type tag display per request */}

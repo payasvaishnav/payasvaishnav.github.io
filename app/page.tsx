@@ -5,7 +5,6 @@ import type { IconType } from "react-icons";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { getAllPosts } from "@/lib/blog";
 import SiteHeader from "@/components/site-header";
-import HireForm from "@/components/hire-form";
 
 
 export default function Home() {
@@ -92,15 +91,13 @@ export default function Home() {
               </li>
             ))}
           </ul>
-
-          <HireForm />
         </div>
       </section>
 
-      <section id="collection" className="recent-posts">
+      <section id="library" className="recent-posts">
         <div className="recent-header">
-          <h2>My collection of blogs and articles</h2>
-          <Link href="/collection" className="recent-view-all">
+          <h2>My library of blogs and articles</h2>
+          <Link href="/library" className="recent-view-all">
             View all →
           </Link>
         </div>
@@ -113,7 +110,7 @@ export default function Home() {
               <li key={post.slug}>
                 <span className="post-date">{formatDate(post.date)}</span>
                 {" : "}
-                <Link className="post-title" href={`/collection/${post.slug}`}>
+                <Link className="post-title" href={`/library/${post.slug}`}>
                   {post.title}
                 </Link>
               </li>

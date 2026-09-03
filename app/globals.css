@@ -420,6 +420,140 @@ hr {
   justify-content: center;
 }
 
+.hire-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.hire-inline a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--link);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hire-inline a:hover,
+.hire-inline a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.hire-card {
+  width: 100%;
+  margin-top: 18px;
+  padding: 15px;
+  border: 1px solid color-mix(in srgb, var(--line) 52%, var(--foreground) 48%);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--background) 94%, var(--foreground) 6%);
+}
+
+.hire-card-inline {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 52px;
+  padding: 9px 11px;
+}
+
+.hire-card-label {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hire-card-kicker {
+  margin: 0 0 3px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.hire-card h2 {
+  margin: 0;
+  font-size: 1.18rem;
+}
+
+.hire-card-copy {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.hire-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.hire-card-inline .hire-card-actions {
+  display: inline-flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 0;
+}
+
+.hire-card-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 9px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 140ms ease, border-color 140ms ease, background-color 140ms ease;
+}
+
+.hire-card-inline .hire-card-actions a {
+  min-height: 32px;
+  padding: 5px 8px;
+  font-size: 0.73rem;
+  white-space: nowrap;
+}
+
+.hire-card-email {
+  border-color: color-mix(in srgb, var(--link) 48%, var(--line) 52%) !important;
+  background: color-mix(in srgb, var(--link) 88%, var(--foreground) 12%);
+  color: #fff !important;
+}
+
+.hire-card-linkedin {
+  color: var(--foreground) !important;
+  background: transparent;
+}
+
+.hire-card-actions a:hover,
+.hire-card-actions a:focus-visible {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--link) 70%, var(--foreground) 30%);
+}
+
+html[data-theme="dark"] .hire-card {
+  background: color-mix(in srgb, var(--background) 82%, #1d2735 18%);
+  border-color: color-mix(in srgb, var(--line) 58%, var(--foreground) 42%);
+}
+
+html[data-theme="dark"] .hire-card-linkedin {
+  color: #f1f6ff !important;
+}
+
 .socials li {
   margin: 0;
 }
@@ -559,6 +693,69 @@ hr {
 .hire-form-wrap h3 {
   margin: 2px 0 10px;
   font-size: 1.15rem;
+}
+
+.hire-contact-copy {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.hire-contact-actions {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.hire-contact-primary,
+.hire-contact-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hire-contact-primary {
+  border-color: color-mix(in srgb, var(--link) 42%, var(--line) 58%);
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--link) 92%, var(--foreground) 8%),
+    color-mix(in srgb, var(--link) 76%, var(--foreground) 24%)
+  );
+  color: #fff;
+}
+
+.hire-contact-secondary {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--background) 92%, var(--foreground) 8%);
+}
+
+.hire-contact-primary:hover,
+.hire-contact-primary:focus-visible,
+.hire-contact-secondary:hover,
+.hire-contact-secondary:focus-visible {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--link) 58%, var(--foreground) 42%);
+}
+
+.hire-contact-address {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.hire-contact-address a {
+  color: var(--link);
+  font-weight: 700;
 }
 
 .hire-form {
@@ -769,6 +966,53 @@ html[data-theme="dark"] .hire-form-fallback a {
   color: var(--link);
 }
 
+.contact-ticker {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--background) 95%, var(--foreground) 5%);
+}
+
+.contact-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: contact-ticker-scroll 36s linear infinite;
+}
+
+.contact-ticker-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.contact-ticker-message a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.contact-ticker-message a:hover,
+.contact-ticker-message a:focus-visible {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.contact-ticker:hover .contact-ticker-track,
+.contact-ticker:focus-within .contact-ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes contact-ticker-scroll {
+  to {
+    transform: translateX(-25%);
+  }
+}
+
 .site-footer {
   border-top: 1px solid var(--line);
   margin-top: auto;
@@ -858,6 +1102,12 @@ html[data-theme="dark"] .hire-form-fallback a {
     align-items: flex-start;
   }
 
+  .contact-ticker-message {
+    gap: 5px;
+    padding: 9px 12px;
+    font-size: 0.76rem;
+  }
+
   .intro-grid {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -910,5 +1160,21 @@ html[data-theme="dark"] .hire-form-fallback a {
   .post-content p:has(img + img) img {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-ticker {
+    overflow: visible;
+  }
+
+  .contact-ticker-track {
+    width: 100%;
+    justify-content: center;
+    animation: none;
+  }
+
+  .contact-ticker-message:not(:first-child) {
+    display: none;
   }
 }
