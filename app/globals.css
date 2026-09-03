@@ -197,6 +197,34 @@ hr {
   border-radius: 12px;
   border: 1px solid var(--line);
 }
+
+.post-content img[alt^="Visa internship"] {
+  display: block;
+  width: min(100%, 34rem);
+  margin: 1rem auto 1.5rem;
+}
+
+.post-content img[alt*="portrait"],
+.post-content img[alt*="night"],
+.post-content img[alt*="CSR"] {
+  width: min(100%, 22rem);
+}
+
+.post-content img[alt="Visa internship portrait"] {
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.post-content img[alt="Visa internship office at night"] {
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.post-content img[alt="Visa internship office celebration"] {
+  width: min(100%, 22rem);
+}
 /* 
 .post-content img[alt="pic2"] {
   max-width: 650px;
@@ -218,6 +246,17 @@ hr {
   max-width: none;
   height: auto;
   margin: 0;
+}
+
+.post-content p:has(img[alt^="Visa internship"] + img[alt^="Visa internship"]) {
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.post-content p:has(img[alt^="Visa internship"] + img[alt^="Visa internship"]) img {
+  width: min(16rem, 47%);
+  height: 16rem;
+  object-fit: cover;
 }
 
 .post-content pre {
