@@ -102,7 +102,7 @@ For me, this was a summer full of learning, work, and memorable experiences. I a
 
 The best part is that the story does not end with the summer.
 
-I am really happy to share that I received a PPO from Visa. I will be returning for a semester internship and will then continue as a full-time engineer.
+I am really happy to share that I have received a return offer from Visa. I will be returning for a semester internship and will then continue as a full-time engineer.
 
 Going from coming across an opening, sending cold messages for a referral, and hoping for a chance to interview to having the opportunity to return feels a little unreal. The summer gave me challenging work, great people, and plenty of stories. Now it has also given me a next chapter.
 
