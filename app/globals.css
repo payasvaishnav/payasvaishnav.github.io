@@ -982,6 +982,7 @@ html[data-theme="dark"] .hire-form-fallback a {
 .collection-title {
   margin-top: 18px;
   color: var(--link);
+  font-size: 1.65rem;
   font-style: italic;
   font-weight: 600;
 }
