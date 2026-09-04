@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Mail } from "lucide-react";
 import type { IconType } from "react-icons";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { getAllPosts } from "@/lib/blog";
 import { getAllProjects } from "@/lib/projects";
+import ProfileImage from "@/components/profile-image";
 import SiteHeader from "@/components/site-header";
 
 
@@ -77,13 +77,7 @@ export default function Home() {
 
 
         <div className="profile-wrap">
-          <Image
-            className="profile-image"
-            src="/profile.jpg"
-            alt="Payas Vaishnav"
-            width={1500}
-            height={450}
-          />
+          <ProfileImage />
 
           <ul className="socials">
             {socials.map((social) => (

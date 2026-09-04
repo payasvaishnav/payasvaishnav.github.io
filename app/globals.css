@@ -476,6 +476,37 @@ hr {
   align-items: center;
 }
 
+.profile-image-tooltip {
+  position: relative;
+  width: 100%;
+  outline: none;
+}
+
+.profile-image-message {
+  position: absolute;
+  left: var(--tooltip-x, 50%);
+  top: var(--tooltip-y, 50%);
+  z-index: 1;
+  transform: translate(12px, 14px);
+  padding: 6px 10px;
+  border: 1px solid color-mix(in srgb, var(--line) 55%, var(--foreground) 45%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--background) 88%, var(--foreground) 12%);
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+.profile-image-message[data-visible="true"] {
+  opacity: 1;
+}
+
 .profile-image {
   width: 100%;
   border-radius: 28px;
