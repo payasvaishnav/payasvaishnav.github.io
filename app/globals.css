@@ -482,6 +482,17 @@ hr {
   outline: none;
 }
 
+.profile-image-hit-area {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(
+    38% 38%, 48% 38%, 51% 46%, 63% 50%, 76% 53%, 86% 52%,
+    88% 57%, 77% 60%, 64% 57%, 61% 64%, 53% 67%, 42% 65%,
+    34% 61%, 31% 57%, 23% 62%, 20% 59%, 23% 55%, 32% 51%,
+    36% 48%
+  );
+}
+
 .profile-image-message {
   position: absolute;
   left: var(--tooltip-x, 50%);

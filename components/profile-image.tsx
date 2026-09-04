@@ -11,13 +11,6 @@ export default function ProfileImage() {
       className="profile-image-tooltip"
       tabIndex={0}
       aria-label="Don't touch me bro"
-      onMouseEnter={() => setIsTooltipVisible(true)}
-      onMouseLeave={() => setIsTooltipVisible(false)}
-      onMouseMove={(event) => {
-        const bounds = event.currentTarget.getBoundingClientRect();
-        event.currentTarget.style.setProperty("--tooltip-x", `${event.clientX - bounds.left}px`);
-        event.currentTarget.style.setProperty("--tooltip-y", `${event.clientY - bounds.top}px`);
-      }}
       onFocus={() => setIsTooltipVisible(true)}
       onBlur={() => setIsTooltipVisible(false)}
     >
@@ -27,6 +20,23 @@ export default function ProfileImage() {
         alt="Payas Vaishnav"
         width={1500}
         height={450}
+      />
+      <div
+        className="profile-image-hit-area"
+        aria-hidden="true"
+        onMouseEnter={() => setIsTooltipVisible(true)}
+        onMouseLeave={() => setIsTooltipVisible(false)}
+        onMouseMove={(event) => {
+          const tooltipContainer = event.currentTarget.parentElement;
+
+          if (!tooltipContainer) {
+            return;
+          }
+
+          const bounds = tooltipContainer.getBoundingClientRect();
+          tooltipContainer.style.setProperty("--tooltip-x", `${event.clientX - bounds.left}px`);
+          tooltipContainer.style.setProperty("--tooltip-y", `${event.clientY - bounds.top}px`);
+        }}
       />
       <span className="profile-image-message" data-visible={isTooltipVisible} aria-hidden="true">
         Don&apos;t touch me bro
