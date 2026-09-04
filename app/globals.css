@@ -60,6 +60,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: Georgia, "Times New Roman", serif;
   font-weight: 400;
   line-height: 1.35;
   margin: 0;
@@ -78,6 +79,12 @@ h2 {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.topbar nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .theme-toggle {
@@ -130,6 +137,75 @@ hr {
 
 .post-list li {
   margin: 0 0 10px;
+}
+
+.project-list {
+  margin: 14px 0 0 20px;
+  padding: 0;
+}
+
+.project-list li {
+  margin-bottom: 10px;
+}
+
+.project-title {
+  color: var(--link);
+}
+
+.project-title:hover,
+.project-title:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.project-summary,
+.project-description {
+  color: var(--muted);
+}
+
+.project-list-detailed {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 360px));
+  gap: 18px;
+  margin: 24px 0 0;
+}
+
+.project-item {
+  margin: 0 !important;
+  padding: 17px 19px 18px;
+  border: 1px solid color-mix(in srgb, var(--line) 72%, var(--foreground) 28%);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--background) 94%, var(--foreground) 6%);
+}
+
+.project-title-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+
+.project-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+
+.project-description {
+  margin: 10px 0 0;
+  font-size: 0.88em;
+  font-style: normal;
+  line-height: 1.55;
+}
+
+.project-technologies {
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.015em;
 }
 
 .post-title {
@@ -881,6 +957,17 @@ html[data-theme="dark"] .hire-form-fallback a {
   margin-top: 34px;
 }
 
+.home-archives {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+}
+
+.home-archives .post-list,
+.home-archives .project-list {
+  margin-top: 14px;
+}
+
 .recent-header {
   display: flex;
   align-items: baseline;
@@ -895,6 +982,18 @@ html[data-theme="dark"] .hire-form-fallback a {
 .collection-title {
   margin-top: 18px;
   color: var(--link);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.collection-count {
+  color: var(--muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.64em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .blog-post-title {
@@ -1121,6 +1220,11 @@ html[data-theme="dark"] .hire-form-fallback a {
   .recent-header {
     flex-wrap: wrap;
     gap: 8px;
+  }
+
+  .home-archives {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .profile-hire-button {

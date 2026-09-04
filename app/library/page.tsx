@@ -23,7 +23,9 @@ export default function BlogsPage() {
   return (
     <main className="page">
       <SiteHeader />
-      <h2 className="collection-title">Library</h2>
+      <h2 className="collection-title">
+        Library <span className="collection-count">({posts.length})</span>
+      </h2>
       <p className="muted">A library of thoughts and interesting reads.</p>
       <hr className="collection-sep" aria-hidden="true" />
 

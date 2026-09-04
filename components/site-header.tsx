@@ -14,6 +14,9 @@ export default function SiteHeader() {
           <Link href="/library" className="top-link">
             Library
           </Link>
+          <Link href="/collection" className="top-link">
+            Collection
+          </Link>
         </nav>
         <ThemeToggle />
       </div>

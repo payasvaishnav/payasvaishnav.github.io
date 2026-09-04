@@ -4,11 +4,13 @@ import { Mail } from "lucide-react";
 import type { IconType } from "react-icons";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { getAllPosts } from "@/lib/blog";
+import { getAllProjects } from "@/lib/projects";
 import SiteHeader from "@/components/site-header";
 
 
 export default function Home() {
   const posts = getAllPosts();
+  const projects = getAllProjects();
 
   const socials: { label: string; href: string; icon: IconType }[] = [
     { label: "Twitter", href: "https://x.com/payasvaishnav", icon: FaXTwitter },
@@ -17,6 +19,7 @@ export default function Home() {
     { label: "Email", href: "mailto:replypkv@gmail.com", icon: Mail },
   ];
   const recentPosts = posts.slice(0, 3);
+  const recentProjects = projects.slice(0, 3);
 
   const formatDate = (date: string) => {
     const parsedDate = new Date(date);
@@ -94,30 +97,54 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="library" className="recent-posts">
-        <div className="recent-header">
-          <h2>My library of blogs and articles</h2>
+      <div className="home-archives">
+        <section id="library" className="recent-posts">
+          <div className="recent-header">
+            <h2>Library of Articles <span className="collection-count">({posts.length})</span></h2>
           <Link href="/library" className="recent-view-all">
             View all →
           </Link>
-        </div>
-        {/* <p className="muted></p> */}
-        {recentPosts.length === 0 ? (
-          <p className="muted">Will be added soon :)</p>
-        ) : (
-          <ul className="post-list">
-            {recentPosts.map((post) => (
-              <li key={post.slug}>
-                <span className="post-date">{formatDate(post.date)}</span>
-                {" : "}
-                <Link className="post-title" href={`/library/${post.slug}`}>
-                  {post.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
+          </div>
+          {recentPosts.length === 0 ? (
+            <p className="muted">Will be added soon :)</p>
+          ) : (
+            <ul className="post-list">
+              {recentPosts.map((post) => (
+                <li key={post.slug}>
+                  <span className="post-date">{formatDate(post.date)}</span>
+                  {" : "}
+                  <Link className="post-title" href={`/library/${post.slug}`}>
+                    {post.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+
+        <section id="collection" className="recent-posts">
+          <div className="recent-header">
+            <h2>Collection of Cool Things <span className="collection-count">({projects.length})</span></h2>
+            <Link href="/collection" className="recent-view-all">
+              View all →
+            </Link>
+          </div>
+          {recentProjects.length === 0 ? (
+            <p className="muted">Projects will be added soon :)</p>
+          ) : (
+            <ul className="project-list">
+              {recentProjects.map((project) => (
+                <li key={project.title}>
+                  <a href={project.href} className="project-title" {...(project.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+                    {project.title}
+                  </a>
+                  <span className="project-technologies"> ({project.technologies.join(" / ")})</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      </div>
     </main>
   );
 }
