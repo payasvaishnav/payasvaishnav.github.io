@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { IconType } from "react-icons";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import GmailIcon from "@/components/gmail-icon";
@@ -13,7 +14,9 @@ export default function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="site-footer-inner">
-        <p className="site-footer-copy">All rights reserved. Payas Vaishnav.</p>
+        <p className="site-footer-copy">
+          <Link href="/policies">&copy; 2026 Payas Vaishnav. All rights reserved.</Link>
+        </p>
 
         <ul className="site-footer-socials">
           {socials.map((social) => (

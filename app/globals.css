@@ -1192,6 +1192,68 @@ html[data-theme="dark"] .hire-form-fallback a {
   color: var(--muted);
 }
 
+.site-footer-copy a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer-copy a:hover,
+.site-footer-copy a:focus-visible {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.policy-page {
+  max-width: 70ch;
+}
+
+.policy-updated {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.policy-page section {
+  margin-top: 28px;
+  padding-bottom: 10px;
+}
+
+.policy-page section:first-of-type {
+  margin-top: 0;
+}
+
+.policy-page h3 {
+  margin-bottom: 10px;
+  color: var(--foreground);
+  font-size: 1.24rem;
+  font-weight: 600;
+}
+
+.policy-page p {
+  margin-bottom: 14px;
+  color: var(--foreground);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.policy-page strong {
+  color: var(--foreground);
+}
+
+.policy-page a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.policy-notice {
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  padding: 10px 14px;
+  background: color-mix(in srgb, var(--background) 92%, var(--foreground) 8%);
+}
+
 .site-footer-socials {
   list-style: none;
   display: flex;
