@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 import SiteHeader from "@/components/site-header";
+
+export const metadata: Metadata = {
+  title: "Library",
+  description: "Articles, thoughts, and technical notes by Payas Vaishnav.",
+};
 
 function formatDate(date: string) {
   const parsedDate = new Date(date);

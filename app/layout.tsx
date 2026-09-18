@@ -5,7 +5,10 @@ import ContactTicker from "@/components/contact-ticker";
 import SiteFooter from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Payas Vaishnav",
+  title: {
+    default: "Payas Vaishnav",
+    template: "%s | Payas Vaishnav",
+  },
   description: "A personal space for systems, projects, and ideas..",
   verification: {
     google: "LOxBeV3HrCctugpOGifIpfOTWQHUJf5GF7nxBS45IwA",

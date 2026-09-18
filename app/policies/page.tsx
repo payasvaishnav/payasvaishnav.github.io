@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SiteHeader from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Policies | Payas Vaishnav",
+  title: "Policies",
   description: "Copyright, content-use, and privacy policies for Payas Vaishnav's website.",
 };
 

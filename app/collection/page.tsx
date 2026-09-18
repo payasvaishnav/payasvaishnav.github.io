@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import SiteHeader from "@/components/site-header";
 import { getAllProjects } from "@/lib/projects";
+
+export const metadata: Metadata = {
+  title: "Collection",
+  description: "A collection of projects and systems built by Payas Vaishnav.",
+};
 
 export default function CollectionPage() {
   const projects = getAllProjects();
