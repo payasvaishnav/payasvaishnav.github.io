@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { Mail } from "lucide-react";
 import type { IconType } from "react-icons";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { getAllPosts } from "@/lib/blog";
 import { getAllProjects } from "@/lib/projects";
+import GmailIcon from "@/components/gmail-icon";
 import ProfileImage from "@/components/profile-image";
 import SiteHeader from "@/components/site-header";
 
@@ -12,11 +12,11 @@ export default function Home() {
   const posts = getAllPosts();
   const projects = getAllProjects();
 
-  const socials: { label: string; href: string; icon: IconType }[] = [
-    { label: "Twitter", href: "https://x.com/payasvaishnav", icon: FaXTwitter },
-    { label: "LinkedIn", href: "https://linkedin.com/in/payasv", icon: FaLinkedin },
-    { label: "GitHub", href: "https://github.com/payasvaishnav", icon: FaGithub },
-    { label: "Email", href: "mailto:replypkv@gmail.com", icon: Mail },
+  const socials: { label: string; href: string; icon: IconType; brand: string }[] = [
+    { label: "Twitter", href: "https://x.com/payasvaishnav", icon: FaXTwitter, brand: "x" },
+    { label: "LinkedIn", href: "https://linkedin.com/in/payasv", icon: FaLinkedin, brand: "linkedin" },
+    { label: "GitHub", href: "https://github.com/payasvaishnav", icon: FaGithub, brand: "github" },
+    { label: "Email", href: "mailto:replypkv@gmail.com", icon: GmailIcon, brand: "gmail" },
   ];
   const recentPosts = posts.slice(0, 3);
   const recentProjects = projects.slice(0, 3);
@@ -83,7 +83,7 @@ export default function Home() {
             {socials.map((social) => (
               <li key={social.label}>
                 <a href={social.href} target="_blank" rel="noopener noreferrer" title={social.label}>
-                  <social.icon size={16} aria-hidden="true" />
+                  <social.icon className={`brand-icon brand-icon-${social.brand}`} size={20} aria-hidden="true" />
                 </a>
               </li>
             ))}

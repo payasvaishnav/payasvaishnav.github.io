@@ -676,6 +676,22 @@ html[data-theme="dark"] .hire-card-linkedin {
   margin: 0;
 }
 
+.brand-icon {
+  flex: 0 0 auto;
+}
+
+.brand-icon-linkedin {
+  color: #0a66c2;
+}
+
+.brand-icon-github {
+  color: #181717;
+}
+
+html[data-theme="dark"] .brand-icon-github {
+  color: #f0f3f6;
+}
+
 .socials a {
   align-items: center;
   display: inline-block;

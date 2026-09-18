@@ -1,12 +1,12 @@
-import { Mail } from "lucide-react";
 import type { IconType } from "react-icons";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import GmailIcon from "@/components/gmail-icon";
 
-const socials: { label: string; href: string; icon: IconType }[] = [
-  { label: "Twitter", href: "https://x.com/payasvaishnav", icon: FaXTwitter },
-  { label: "LinkedIn", href: "https://linkedin.com/in/payasv", icon: FaLinkedin },
-  { label: "GitHub", href: "https://github.com/payasvaishnav", icon: FaGithub },
-  { label: "Email", href: "mailto:replypkv@gmail.com", icon: Mail },
+const socials: { label: string; href: string; icon: IconType; brand: string }[] = [
+  { label: "Twitter", href: "https://x.com/payasvaishnav", icon: FaXTwitter, brand: "x" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/payasv", icon: FaLinkedin, brand: "linkedin" },
+  { label: "GitHub", href: "https://github.com/payasvaishnav", icon: FaGithub, brand: "github" },
+  { label: "Email", href: "mailto:replypkv@gmail.com", icon: GmailIcon, brand: "gmail" },
 ];
 
 export default function SiteFooter() {
@@ -19,7 +19,7 @@ export default function SiteFooter() {
           {socials.map((social) => (
             <li key={social.label}>
               <a href={social.href} target="_blank" rel="noopener noreferrer">
-                <social.icon size={16} aria-hidden="true" />
+                <social.icon className={`brand-icon brand-icon-${social.brand}`} size={16} aria-hidden="true" />
                 <span>{social.label}</span>
               </a>
             </li>
