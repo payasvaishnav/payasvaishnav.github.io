@@ -476,6 +476,12 @@ hr {
   align-items: center;
 }
 
+@media (min-width: 721px) {
+  .profile-wrap {
+    align-self: center;
+  }
+}
+
 .profile-image-tooltip {
   position: relative;
   width: 100%;
