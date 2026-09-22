@@ -424,7 +424,12 @@ hr {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--line);
-  padding-bottom: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--background);
+  margin-top: -22px;
+  padding: 22px 0 16px;
 }
 
 .site-name {
@@ -1304,7 +1309,8 @@ html[data-theme="dark"] .hire-form-fallback a {
   }
 
   .topbar {
-    padding-bottom: 12px;
+    margin-top: -18px;
+    padding: 18px 0 12px;
   }
 
   .site-name {
