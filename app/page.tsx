@@ -68,7 +68,7 @@ export default function Home() {
             I am interested in designing systems that are simple, efficient,
             and reliable, and in understanding how they behave under real-world
             constraints.
-          </p> */}
+          </p>  */}
           <p>
             Alongside this, I have an active interest in geopolitics, enjoy playing the tabla 
             and ukulele, and follow and play a variety of sports.
