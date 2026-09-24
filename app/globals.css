@@ -267,11 +267,23 @@ hr {
   font-size: 0.95em;
 }
 
+.post-content a:hover,
+.post-content a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
 .post-content img {
   max-width: 100%;
   height: auto;
   border-radius: 12px;
   border: 1px solid var(--line);
+}
+
+.post-content img[alt="The same feedback loop can produce diminishing or accelerating returns"] {
+  display: block;
+  width: min(100%, 680px);
+  margin: 1.25rem auto;
 }
 
 .post-content img[alt^="Visa internship"] {

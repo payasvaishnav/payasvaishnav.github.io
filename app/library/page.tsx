@@ -43,7 +43,7 @@ export default function BlogsPage() {
             <li key={post.slug}>
               <div className="post-item">
                 <div className="post-header-line">
-                  <span className="post-date">{formatDate(post.date)} :</span>
+                  {post.date && <span className="post-date">{formatDate(post.date)} —</span>}
                   <Link className="post-title" href={`/library/${post.slug}`}>
                     {post.title}
                   </Link>

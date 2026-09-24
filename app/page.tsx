@@ -105,8 +105,12 @@ export default function Home() {
             <ul className="post-list">
               {recentPosts.map((post) => (
                 <li key={post.slug}>
-                  <span className="post-date">{formatDate(post.date)}</span>
-                  {" : "}
+                  {post.date && (
+                    <>
+                      <span className="post-date">{formatDate(post.date)}</span>
+                      {" — "}
+                    </>
+                  )}
                   <Link className="post-title" href={`/library/${post.slug}`}>
                     {post.title}
                   </Link>
