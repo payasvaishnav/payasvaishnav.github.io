@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import SiteHeader from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Policies",
-  description: "Copyright, content-use, and privacy policies for Payas Vaishnav's website.",
+  title: "Policies & Privacy",
+  description: "Copyright, content-use, and privacy information for Payas Vaishnav's website.",
 };
 
 export default function PoliciesPage() {
@@ -11,14 +11,14 @@ export default function PoliciesPage() {
     <main className="page">
       <SiteHeader />
 
-      <h2 className="collection-title">Policies</h2>
+      <h2 className="collection-title">Policies &amp; Privacy</h2>
       <p className="muted">
         How this website handles content, attribution, privacy, and personal views.
       </p>
       <hr className="collection-sep" aria-hidden="true" />
 
       <article className="policy-page">
-        <p className="policy-updated">Last updated: September 18, 2026</p>
+        <p className="policy-updated">Last updated: September 25, 2026</p>
 
         <section>
           <h3>Purpose of this website</h3>

@@ -15,7 +15,9 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="site-footer-inner">
         <p className="site-footer-copy">
-          <Link href="/policies">&copy; 2026 Payas Vaishnav. All rights reserved.</Link>
+          &copy; 2026 <Link href="/">Payas Vaishnav</Link>{" "}
+          <span aria-hidden="true">·</span>{" "}
+          <Link href="/policies">Policies &amp; Privacy</Link>
         </p>
 
         <ul className="site-footer-socials">

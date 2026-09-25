@@ -78,20 +78,20 @@ h2 {
 .topbar-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .topbar nav {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .theme-toggle {
   border: 1px solid var(--line);
   border-radius: 999px;
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   background: transparent;
   color: var(--foreground);
@@ -444,14 +444,14 @@ hr {
   transform: translateZ(0);
   will-change: transform;
   margin-top: -22px;
-  padding: 22px 0 16px;
+  padding: 12px 0 8px;
 }
 
 .site-name {
   color: var(--foreground);
   text-decoration: none;
   display: inline-block;
-  font-size: 2.05rem;
+  font-size: 1.7rem;
   font-style: italic;
   font-weight: 600;
 }
@@ -459,7 +459,7 @@ hr {
 .top-link {
   color: var(--foreground);
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -1285,7 +1285,7 @@ html[data-theme="dark"] .hire-form-fallback a {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
@@ -1294,25 +1294,27 @@ html[data-theme="dark"] .hire-form-fallback a {
   margin: 0;
 }
 
+.site-footer-socials li + li {
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 1px solid var(--line);
+}
+
 .site-footer-socials a {
   align-items: center;
   display: inline-flex;
-  gap: 8px;
-  color: var(--foreground);
+  gap: 6px;
+  color: var(--muted);
   text-decoration: none;
-  border: 1px solid #92897a;
-  border-radius: 7px;
-  padding: 6px 11px;
-  font-size: 0.92rem;
-  background: color-mix(in srgb, var(--background) 96%, var(--foreground) 4%);
-  transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease;
+  font-size: 0.86rem;
+  transition: color 140ms ease;
 }
 
 .site-footer-socials a:hover,
 .site-footer-socials a:focus-visible {
-  color: color-mix(in srgb, var(--foreground) 86%, black 14%);
-  background: color-mix(in srgb, var(--background) 88%, var(--foreground) 12%);
-  border-color: color-mix(in srgb, var(--line) 30%, var(--foreground) 70%);
+  color: var(--foreground);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 @media (max-width: 720px) {
@@ -1326,11 +1328,11 @@ html[data-theme="dark"] .hire-form-fallback a {
 
   .topbar {
     margin-top: -18px;
-    padding: 18px 0 12px;
+    padding: 10px 0 8px;
   }
 
   .site-name {
-    font-size: 1.7rem;
+    font-size: 1.48rem;
   }
 
   .top-link {
