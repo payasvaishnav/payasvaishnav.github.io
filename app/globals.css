@@ -81,6 +81,43 @@ h2 {
   gap: 12px;
 }
 
+.analytics-consent {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 20;
+  max-width: 420px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--background);
+  box-shadow: 0 8px 28px rgb(0 0 0 / 18%);
+  font-size: 0.9rem;
+}
+
+.analytics-consent p {
+  margin: 0 0 12px;
+}
+
+.analytics-consent-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.analytics-consent button {
+  padding: 7px 11px;
+  border: 1px solid var(--foreground);
+  background: var(--foreground);
+  color: var(--background);
+  cursor: pointer;
+  font: inherit;
+}
+
+.analytics-consent button + button {
+  background: transparent;
+  color: var(--foreground);
+}
+
 .topbar nav {
   display: flex;
   align-items: center;

@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import ContactTicker from "@/components/contact-ticker";
 import SiteFooter from "@/components/site-footer";
+import Analytics from "@/components/analytics";
 
 export const metadata: Metadata = {
   title: {
@@ -31,6 +32,7 @@ export default function RootLayout({
         {children}
         <ContactTicker />
         <SiteFooter />
+        <Analytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
       </body>
     </html>
   );
