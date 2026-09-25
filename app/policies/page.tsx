@@ -83,12 +83,11 @@ export default function PoliciesPage() {
           <h3>Privacy and data</h3>
           <p>
             This website does not require an account or sell visitors&apos; personal
-            information. If you opt in, it uses Google Analytics to measure
-            aggregate traffic and page visits; no analytics script is loaded
-            before that choice. You can keep analytics disabled, and you can
-            withdraw consent later by clearing this site&apos;s stored data in your
-            browser. External websites and services linked from this site
-            operate under their own terms and privacy practices.
+            information. It uses Google Analytics to measure traffic and page
+            visits. Analytics is enabled for all visitors and may use cookies or
+            similar technologies as described in Google&apos;s privacy policies.
+            External websites and services linked from this site operate under
+            their own terms and privacy practices.
           </p>
         </section>
 
